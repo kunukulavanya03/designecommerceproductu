@@ -6,6 +6,7 @@ import os
 from database import get_db, engine
 from models import Base
 from schemas import *
+from routes import router as api_router
 import logging
 
 load_dotenv()
@@ -37,7 +38,7 @@ def health_check():
     return {"status": "healthy", "service": "this_project_aims_to_develop_a_backend_api_for_the_designecommerceproductu_platform,_utilizing_fastapi_and_sqlalchemy_for_efficient_data_handling_and_management."}
 
 # API endpoints inferred from frontend
-
+app.include_router(api_router)
 
 if __name__ == "__main__":
     import uvicorn
