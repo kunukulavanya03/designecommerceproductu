@@ -1,4 +1,4 @@
-# This_Project_Aims_To_Develop_A_Backend_Api_For_The_Designecommerceproductu_Platform,_Utilizing_Fastapi_And_Sqlalchemy_For_Efficient_Data_Handling_And_Management. Backend API
+# This_Project_Aims_To_Develop_A_Backend_Api_For_The_Designecommerceproductu_Platform_Using_Fastapi_And_Sqlalchemy,_With_Authentication_Via_Jwt. Backend API
 
 Complete FastAPI backend with authentication, database models, and API endpoints.
 
