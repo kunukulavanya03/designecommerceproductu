@@ -1,0 +1,7 @@
+from fastapi import APIRouter, Depends
+from sqlalchemy.orm import Session
+from database import get_db
+
+router = APIRouter(prefix="")
+
+# No endpoints inferred from frontend. Add your routes here.
