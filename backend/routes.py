@@ -4,17 +4,32 @@ from database import get_db
 
 router = APIRouter(prefix="")
 
-@router.post("/api/products")
+@router.post("/api/register")
+def api_register(db: Session = Depends(get_db)):
+    # TODO: Implement logic for /api/register
+    return {"message": "Stub for /api/register", "method": "POST"}
+
+@router.post("/api/login")
+def api_login(db: Session = Depends(get_db)):
+    # TODO: Implement logic for /api/login
+    return {"message": "Stub for /api/login", "method": "POST"}
+
+@router.get("/api/products")
 def api_products(db: Session = Depends(get_db)):
     # TODO: Implement logic for /api/products
-    return {"message": "Stub for /api/products", "method": "POST"}
+    return {"message": "Stub for /api/products", "method": "GET"}
 
-@router.get("/api/products/{category}")
-def api_products_{category}(db: Session = Depends(get_db)):
-    # TODO: Implement logic for /api/products/{category}
-    return {"message": "Stub for /api/products/{category}", "method": "GET"}
+@router.post("/api/admin/products")
+def api_admin_products(db: Session = Depends(get_db)):
+    # TODO: Implement logic for /api/admin/products
+    return {"message": "Stub for /api/admin/products", "method": "POST"}
 
-@router.put("/api/products/{product_id}")
-def api_products_{product_id}(db: Session = Depends(get_db)):
-    # TODO: Implement logic for /api/products/{product_id}
-    return {"message": "Stub for /api/products/{product_id}", "method": "PUT"}
+@router.put("/api/admin/products/{product_id}")
+def api_admin_products_{product_id}(db: Session = Depends(get_db)):
+    # TODO: Implement logic for /api/admin/products/{product_id}
+    return {"message": "Stub for /api/admin/products/{product_id}", "method": "PUT"}
+
+@router.delete("/api/admin/products/{product_id}")
+def api_admin_products_{product_id}(db: Session = Depends(get_db)):
+    # TODO: Implement logic for /api/admin/products/{product_id}
+    return {"message": "Stub for /api/admin/products/{product_id}", "method": "DELETE"}
