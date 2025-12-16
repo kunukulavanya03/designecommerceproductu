@@ -43,15 +43,18 @@ cd backend
 
 ## Features
 
-- Product Management
-- Category Browsing
-- User Authentication
+- user registration
+- user login
+- product management
 
 ## API Endpoints
 
-- `POST /api/products` - Endpoint for adding new products
-- `GET /api/products/{category}` - Endpoint for browsing products by category
-- `PUT /api/products/{product_id}` - Endpoint for updating product details
+- `POST /api/register` - Endpoint for user registration. Accepts username, email, and password.
+- `POST /api/login` - Endpoint for user login. Accepts credentials and returns a JWT token.
+- `GET /api/products` - Endpoint to retrieve all products. Requires authentication.
+- `POST /api/admin/products` - Endpoint for admins to create new products. Requires admin authentication.
+- `PUT /api/admin/products/{product_id}` - Endpoint for admins to update existing products. Requires admin authentication.
+- `DELETE /api/admin/products/{product_id}` - Endpoint for admins to delete products. Requires admin authentication.
 
 ## License
 
