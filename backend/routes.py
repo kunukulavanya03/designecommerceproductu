@@ -4,6 +4,11 @@ from database import get_db
 
 router = APIRouter(prefix="")
 
+@router.put("/out")
+def out(db: Session = Depends(get_db)):
+    # TODO: Implement logic for /out
+    return {"message": "Stub for /out", "method": "PUT"}
+
 @router.post("/api/register")
 def api_register(db: Session = Depends(get_db)):
     # TODO: Implement logic for /api/register
