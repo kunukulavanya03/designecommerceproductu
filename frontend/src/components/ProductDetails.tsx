@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ArrowLeft, ShoppingCart, Heart, Star, Plus, Minus, Package, Shield, Truck } from 'lucide-react';
 import { Product } from '../App';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { login, register, logout } from './services/api';
 
 interface ProductDetailsProps {
   product: Product;
@@ -48,6 +49,20 @@ export function ProductDetails({
 }: ProductDetailsProps) {
   const [quantity, setQuantity] = useState(1);
   const [addedToCart, setAddedToCart] = useState(false);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // TODO: Replace with actual API endpoint
+        const data = await api.get('/api/items');
+        // Update state with fetched data
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    
+    fetchData();
+  }, []);
+
 
   const handleAddToCart = () => {
     onAddToCart(product, quantity);
