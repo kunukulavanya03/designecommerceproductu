@@ -1,6 +1,6 @@
-# designecommerceproductu
+# Designecommerceproductu
 
-Backend API for designecommerceproductu
+Backend API for Designecommerceproductu
 
 ## Tech Stack
 
@@ -11,7 +11,7 @@ Backend API for designecommerceproductu
 ## Project Structure
 
 ```
-designecommerceproductu/
+Designecommerceproductu/
 ├── frontend/          # Frontend application
 ├── backend/           # Backend API
 ├── README.md          # This file
@@ -43,18 +43,23 @@ cd backend
 
 ## Features
 
-- user registration
-- user login
-- product management
+- Product management
+- Order management
+- Customer management
+- JWT authentication
 
 ## API Endpoints
 
-- `POST /api/register` - Endpoint for user registration. Accepts username, email, and password.
-- `POST /api/login` - Endpoint for user login. Accepts credentials and returns a JWT token.
-- `GET /api/products` - Endpoint to retrieve all products. Requires authentication.
-- `POST /api/admin/products` - Endpoint for admins to create new products. Requires admin authentication.
-- `PUT /api/admin/products/{product_id}` - Endpoint for admins to update existing products. Requires admin authentication.
-- `DELETE /api/admin/products/{product_id}` - Endpoint for admins to delete products. Requires admin authentication.
+- `GET /api/products` - Get all products.
+- `GET /api/products/{product_id}` - Get product details.
+- `POST /api/products` - Create new product.
+- `PUT /api/products/{product_id}` - Update product.
+- `DELETE /api/products/{product_id}` - Delete product.
+- `POST /api/orders` - Create new order.
+- `GET /api/orders` - Get all orders.
+- `GET /api/orders/{order_id}` - Get order details.
+- `PUT /api/orders/{order_id}` - Update order.
+- `DELETE /api/orders/{order_id}` - Delete order.
 
 ## License
 
