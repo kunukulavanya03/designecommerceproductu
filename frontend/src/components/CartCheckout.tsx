@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ArrowLeft, Plus, Minus, Trash2, CreditCard, Lock, CheckCircle } from 'lucide-react';
 import { CartItem } from '../App';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { login, register, logout } from './services/api';
 
 interface CartCheckoutProps {
   cartItems: CartItem[];
