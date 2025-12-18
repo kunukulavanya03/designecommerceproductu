@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Search, ShoppingCart, User, Heart, Filter, Star } from 'lucide-react';
 import { Product } from '../App';
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import { login, register, logout } from './services/api';
 
 const MOCK_PRODUCTS: Product[] = [
   {
@@ -84,6 +85,20 @@ interface HomePageProps {
 export function HomePage({ onProductClick, onNavigateToCart, onNavigateToAccount, cartItemCount }: HomePageProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // TODO: Replace with actual API endpoint
+        const data = await api.get('/api/items');
+        // Update state with fetched data
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    
+    fetchData();
+  }, []);
+
   const [priceFilter, setPriceFilter] = useState<'all' | 'low' | 'mid' | 'high'>('all');
 
   const filteredProducts = MOCK_PRODUCTS.filter(product => {
